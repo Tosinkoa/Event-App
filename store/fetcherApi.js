@@ -3,7 +3,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const fetcherApi = createApi({
   reducerPath: "fetcherApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/",
+    // baseUrl: "http://localhost:5000/",
+    baseUrl: "https://helpful-puppy-d01b53.netlify.app",
     credentials: "include",
   }),
   tagTypes: ["ForEvent", "ForAuth"],
