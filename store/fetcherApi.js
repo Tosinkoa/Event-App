@@ -3,8 +3,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const fetcherApi = createApi({
   reducerPath: "fetcherApi",
   baseQuery: fetchBaseQuery({
-    // baseUrl: "http://localhost:5000/",
-    baseUrl: "https://ivana-event-app.herokuapp.com/",
+    baseUrl: "http://localhost:5000/",
+    // baseUrl: "https://ivana-event-app.herokuapp.com/",
     credentials: "include",
   }),
   tagTypes: ["ForEvent", "ForAuth"],

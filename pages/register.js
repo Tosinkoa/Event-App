@@ -9,16 +9,13 @@ import MyInput from "../components/Formik";
 import { useRegisterUserMutation } from "@/store/fetcherApi";
 import { useRouter } from "next/router";
 import * as Yup from "yup";
-import { notSignAction } from "@/store/not-sign-slice";
-import { useDispatch } from "react-redux";
 import "react-phone-number-input/style.css";
 
 function Signup() {
   const router = useRouter();
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [phoneNumberError, setPhoneNumberError] = useState("");
+  const [phone, setPhone] = useState();
+  const [phoneError, setPhoneError] = useState("");
   const [showPassword, setShowPassword] = useState("password");
-  const dispatch = useDispatch();
   const [registerUser] = useRegisterUserMutation();
 
   //-----------Initial Input Values----------
@@ -55,19 +52,17 @@ function Signup() {
   //------------Submitting Form---------------
   const submitForm = async (values) => {
     if (phone === "") {
-      setPhoneNumberError("Phone number is required");
+      setPhoneError("Phone number is required");
     } else {
-      setPhoneNumberError("");
+      setPhoneError("");
     }
+    const allValues = { ...values, phone };
+    console.log("Phone:", phone);
+    console.log("allValue:", allValues);
 
-    try {
-      const allValues = { ...values, phone };
-      await registerUser(allValues);
-      dispatch(notSignAction.notSignToggle(false));
-      router.push("/thelogin");
-    } catch (error) {
-      return console.log(error);
-    }
+    const result = await registerUser(allValues);
+
+    router.push("/");
   };
 
   //--------Show Password Toggle----------
@@ -146,10 +141,10 @@ function Signup() {
                       name="phone"
                       className="auth_form"
                       placeholder="Enter your phone number"
-                      onChange={setPhoneNumber}
-                      value={phoneNumber}
+                      onChange={setPhone}
+                      value={phone}
                     />
-                    <p className="form_error">{phoneNumberError}</p>
+                    <p className="form_error">{phoneError}</p>
                   </div>
                   <div className="mt-2 w-full relative">
                     <div className="absolute right-4 top-12">

@@ -5,17 +5,14 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import { MdHomeWork } from "react-icons/md";
 import React, { useState } from "react";
-import { useLoginUserMutation, useGetAuthQuery } from "@/store/fetcherApi";
-import { useDispatch } from "react-redux";
+import { useLoginUserMutation } from "@/store/fetcherApi";
 import { useRouter } from "next/router";
 import * as Yup from "yup";
-import { notSignAction } from "@/store/not-sign-slice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Login() {
   const router = useRouter();
-  const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState("password");
   const [loginUser] = useLoginUserMutation();
 
@@ -25,8 +22,7 @@ function Login() {
     if (result?.error?.status !== undefined) {
       toast.error(result.error.data.errors[0].msg);
     } else {
-      dispatch(notSignAction.notSignToggle(false));
-      router.push("/thelogin");
+      router.push("/");
     }
   };
 
