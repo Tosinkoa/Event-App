@@ -24,7 +24,6 @@ function Signup() {
   //------------Phone Input Handler---------------
   const phoneNumberChange = (value, country, e, formattedValue) => {
     setPhoneNumber(e.target.value);
-    console.log(e.target.value);
   };
 
   //-----------Initial Input Values----------

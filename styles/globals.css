@@ -4,7 +4,7 @@
 
 /*-----------------Home-------------------*/
 .empty_table {
-  @apply text-center text-indigo-800 text-3xl m-10 w-full flex;
+  @apply text-center text-indigo-800 text-3xl mt-10 justify-center w-full flex;
 }
 
 /*-----------------Table-------------------*/

@@ -4,7 +4,7 @@ export const fetcherApi = createApi({
   reducerPath: "fetcherApi",
   baseQuery: fetchBaseQuery({
     // baseUrl: "http://localhost:5000/",
-    baseUrl: "https://helpful-puppy-d01b53.netlify.app",
+    baseUrl: "https://ivana-event-app.herokuapp.com/",
     credentials: "include",
   }),
   tagTypes: ["ForEvent", "ForAuth"],
