@@ -71,7 +71,7 @@ function EventForm({ newEvent, formId, theNewEvent = true }) {
                   <a className="cancel_button">Cancel</a>
                 </Link>
                 <button type="submit" className="save_button">
-                  Sell
+                  Save
                 </button>
               </div>
             </Form>
