@@ -1,6 +1,7 @@
 import { FaSignOutAlt } from "react-icons/fa";
 import Link from "next/link";
 import { MdHomeWork, MdLibraryAdd } from "react-icons/md";
+import { AiFillHome } from "react-icons/ai";
 
 const Header = () => {
   return (
@@ -11,7 +12,13 @@ const Header = () => {
           <span className="header_logo">Events</span>
         </div>
       </Link>
-      <div className=" ">
+      <div>
+        <Link href="/">
+          <a className="header_buttons">
+            <AiFillHome className="header_icons " />
+            Home
+          </a>
+        </Link>
         <Link href="/new-event">
           <a className="header_buttons">
             <MdLibraryAdd className="header_icons " />
