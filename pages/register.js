@@ -4,27 +4,22 @@ import { Formik, Form } from "formik";
 import Layout from "../components/Layout";
 import Link from "next/link";
 import { MdHomeWork } from "react-icons/md";
+import PhoneInput from "react-phone-number-input";
 import MyInput from "../components/Formik";
-import PhoneInput from "react-phone-input-2";
 import { useRegisterUserMutation } from "@/store/fetcherApi";
 import { useRouter } from "next/router";
 import * as Yup from "yup";
-import "react-phone-input-2/lib/style.css";
 import { notSignAction } from "@/store/not-sign-slice";
 import { useDispatch } from "react-redux";
+import "react-phone-number-input/style.css";
 
 function Signup() {
   const router = useRouter();
-  const [phone, setPhoneNumber] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [phoneNumberError, setPhoneNumberError] = useState("");
   const [showPassword, setShowPassword] = useState("password");
   const dispatch = useDispatch();
   const [registerUser] = useRegisterUserMutation();
-
-  //------------Phone Input Handler---------------
-  const phoneNumberChange = (value, country, e, formattedValue) => {
-    setPhoneNumber(e.target.value);
-  };
 
   //-----------Initial Input Values----------
   const initialValues = { firstName: "", lastName: "", email: "", username: "", password: "", secPassword: "" };
@@ -147,14 +142,12 @@ function Signup() {
                   <div className="mt-2">
                     {/*_________Phone_______*/}
                     <PhoneInput
-                      country={"us"}
+                      country="US"
                       name="phone"
-                      inputStyle={{
-                        width: "100%",
-                        fontSize: "13px",
-                      }}
-                      onChange={phoneNumberChange}
-                      value={phone}
+                      className="auth_form"
+                      placeholder="Enter your phone number"
+                      onChange={setPhoneNumber}
+                      value={phoneNumber}
                     />
                     <p className="form_error">{phoneNumberError}</p>
                   </div>

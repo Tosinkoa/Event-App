@@ -7,7 +7,14 @@ module.exports = {
     },
     extend: {
       animation: {
-        bounce: "bounce 2s infinite",
+        wiggle: "wiggle 2s ease-in-out infinite",
+        bounce: "bounce 1.5s infinite",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "scale(1.2) rotate(-4deg)" },
+          "50%": { transform: " scale(1) rotate(0deg)" },
+        },
       },
       width: {
         "1/100": "1%",

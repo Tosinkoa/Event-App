@@ -86,7 +86,7 @@
 }
 
 .event_form_title {
-  @apply md:text-3xl sm:text-2xl font-logo-font text-blue-700 text-center;
+  @apply md:text-3xl sm:text-2xl font-logo-font animate-bounce drop-shadow-lg text-blue-700 text-center;
 }
 
 .save_button {
@@ -107,7 +107,7 @@
 }
 
 .auth_sec_background {
-  @apply w-4/5 mx-auto items-center justify-center;
+  @apply w-4/5 mx-auto items-center align-middle  justify-center;
 }
 
 .auth_logo_header {
@@ -115,7 +115,7 @@
 }
 
 .auth_logo_background {
-  @apply h-full w-full  flex flex-row  justify-center items-center;
+  @apply h-full w-full  flex flex-row animate-wiggle  justify-center items-center;
 }
 
 .auth_logo_text {

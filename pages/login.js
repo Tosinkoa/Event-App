@@ -21,16 +21,12 @@ function Login() {
 
   //------------Submitting Form---------------
   const submitForm = async (values) => {
-    try {
-      const result = await loginUser(values);
-      if (result?.error?.status !== undefined) {
-        toast.error(result.error.data.errors[0].msg);
-      } else {
-        dispatch(notSignAction.notSignToggle(false));
-        router.push("/thelogin");
-      }
-    } catch (error) {
-      return console.log(error);
+    const result = await loginUser(values);
+    if (result?.error?.status !== undefined) {
+      toast.error(result.error.data.errors[0].msg);
+    } else {
+      dispatch(notSignAction.notSignToggle(false));
+      router.push("/thelogin");
     }
   };
 

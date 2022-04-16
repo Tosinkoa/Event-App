@@ -24,7 +24,7 @@ function EventForm({ newEvent, formId, theNewEvent = true }) {
   });
 
   return (
-    <div className="flex">
+    <div className="flex mt-14">
       <div className="event_form_background">
         <p className="event_form_title">{router.pathname === "/new-event" ? "Add New Event" : "Edit Event"}</p>
         <div className="flex flex-col">
