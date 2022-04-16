@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*-----------------Home-------------------*/
+.empty_table {
+  @apply text-center text-indigo-800 text-3xl mt-10 justify-center w-full flex;
+}
+
+/*-----------------Table-------------------*/
+
+.table_title_background {
+  @apply font-logo-font flex flex-col justify-center mx-auto;
+}
+
+.table_title {
+  @apply text-2xl  mx-auto text-center text-indigo-600 my-4;
+}
+
+.table_sec_title {
+  @apply font-my-font font-bold mb-4 bg-indigo-800 mx-auto text-center text-white text-sm sm:w-2/6 hover:bg-indigo-700 active:bg-indigo-700 active:text-base  transition-all hover:shadow-md  focus:text-base delay-100 ease-in-out lg:w-1/12 rounded-xl py-2 px-2;
+}
+
+.table {
+  @apply w-full lg:text-sm sm:text-xs  sm:text-left md:text-center  text-gray-500;
+}
+
+.table_head {
+  @apply text-xs text-gray-700 w-11/12 justify-center uppercase  bg-gray-50;
+}
+
+.row_head_icon_bg {
+  @apply bg-gray-200 rounded-full p-1 ml-2 flex;
+}
+
+.table_row {
+  @apply md:font-bold sm:font-semibold;
+}
+
+.table_head_row {
+  @apply lg:px-6 sm:px-2 py-2 text-left w-1/5;
+}
+
+.table_head_row {
+  @apply bg-white border-b hover:bg-gray-50;
+}
+
+.table_head_row_text {
+  @apply lg:px-6 sm:px-2 py-4  font-medium text-gray-900;
+}
+
+.table_data {
+  @apply lg:px-6 sm:px-2 py-2 text-left w-1/5;
+}
+
+.table_detail {
+  @apply font-medium inline-flex text-blue-500 hover:underline;
+}
+
+/*-----------------WarningMssg-------------------*/
+
+.warning_mssg_background {
+  @apply bg-gray-50  p-10 sm:w-4/5 md:w-2/4 lg:left-1/4 lg:right-1/4 md:left-1/4 sm:left-10 border fixed  z-10 rounded-md flex flex-col;
+}
+
+.warning_mssg_title {
+  @apply mx-auto text-2xl font-extrabold text-red-600 font-my-font;
+}
+
+.warning_mssg_text {
+  @apply mx-auto text-center font-semibold;
+}
+
+.backdrop {
+  @apply bg-black opacity-30 flex select-none top-0 bottom-0  left-0 right-0 min-h-screen absolute z-10 inset-0;
+}
+
+/*-----------------EventForm-------------------*/
+
+.event_input {
+  @apply w-full border-gray-300  rounded-md  text-sm p-4 flex border-2;
+}
+
+.event_form_background {
+  @apply md:w-2/4 my-10 sm:w-11/12 bg-gray-50 mx-auto md:p-20 sm:p-10 content-center shadow-xl border rounded-xl border-gray-300;
+}
+
+.event_form_title {
+  @apply md:text-3xl sm:text-2xl font-logo-font animate-bounce drop-shadow-lg text-blue-700 text-center;
+}
+
+.save_button {
+  @apply md:px-6 md:py-3 sm:px-3 sm:py-1 bg-blue-700 hover:bg-blue-600 shadow rounded text-sm text-white;
+}
+
+.cancel_button {
+  @apply px-6 py-3 sm:px-3 sm:py-1 bg-gray-500 hover:bg-gray-700 shadow rounded text-sm text-white;
+}
+
+.event_form_label {
+  @apply text-base text-gray-800 font-extrabold font-my-font;
+}
+
+/*-----------------Login/Signup-------------------*/
+.auth_background {
+  @apply bg-gradient-to-tl to-yellow-200 from-yellow-800 overflow-hidden overflow-y-auto flex-col min-h-screen w-full  pb-10;
+}
+
+.auth_sec_background {
+  @apply w-4/5 mx-auto items-center align-middle  justify-center;
+}
+
+.auth_logo_header {
+  @apply cursor-default flex  items-center;
+}
+
+.auth_logo_background {
+  @apply h-full w-full  flex flex-row animate-wiggle  justify-center items-center;
+}
+
+.auth_logo_text {
+  @apply md:text-4xl sm:text-2xl mt-10  inline-flex font-logo-font text-indigo-900;
+}
+
+.auth_form_header {
+  @apply bg-gray-100 shadow rounded lg:w-2/4 justify-center md:mx-auto sm:mx-0 md:w-5/12 w-full p-10 mt-8;
+}
+
+.auth_form_header_text {
+  @apply text-2xl font-extrabold leading-6 text-gray-800;
+}
+
+.auth_form {
+  @apply bg-white border rounded outline-none text-sm font-medium  text-gray-800 w-full p-3 border-gray-300;
+}
+
+.formshowpassword {
+  @apply absolute right-0 mt-2 mr-3 border-none cursor-pointer;
+}
+
+.authformbutton {
+  @apply focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-full;
+}
+
+.authformlabel {
+  @apply odd:text-sm font-medium leading-none text-gray-800;
+}
+
+.auth_switch {
+  @apply text-sm font-medium leading-none underline text-gray-800 cursor-pointer;
+}
+
+.auth_question {
+  @apply text-sm mt-4 font-medium leading-none text-center text-gray-500;
+}
+
+/*-----------------Formik-------------------*/
+
+.mylabel {
+  @apply pb-2 text-lg font-semibold text-gray-800;
+}
+
+.form_error {
+  @apply text-red-500 text-sm flex;
+}
+
+/*-----------------Header-------------------*/
+
+.header_buttons {
+  @apply inline-flex font-semibold hover:bg-indigo-700 rounded-md md:h-7 sm:h-6  px-2 hover:text-white hover:shadow-md focus:bg-indigo-700 focus:text-white focus:shadow-md transition-all ease-linear delay-150 sm:text-sm md:text-base;
+}
+
+.header_background {
+  @apply inline-flex bg-indigo-200 border-b w-full p-4 h-14 border-gray-400 mb-3 justify-between fixed;
+}
+
+.header_logo {
+  @apply md:text-2xl sm:text-xl inline-flex font-logo-font text-indigo-900;
+}
+
+.header_options {
+  @apply inline-flex md:mt-1 sm:mt-2 space-x-4 text-indigo-900;
+}
+
+.header_icons {
+  @apply md:mt-1 md:text-xl sm:text-lg sm:mt-0.5;
+}
