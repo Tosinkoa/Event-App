@@ -13,12 +13,6 @@ const Header = () => {
         </div>
       </Link>
       <div>
-        <Link href="/">
-          <a className="header_buttons">
-            <AiFillHome className="header_icons " />
-            Home
-          </a>
-        </Link>
         <Link href="/new-event">
           <a className="header_buttons">
             <MdLibraryAdd className="header_icons " />

@@ -23,7 +23,7 @@ const WarrningMssg = ({ id }) => {
           <div className="flex justify-center">
             <div
               className={`warning_mssg_background  ${
-                showWarningMssg ? "translate-y-2" : "translate-y-[600%]"
+                showWarningMssg ? "translate-y-0" : "translate-y-[600%]"
               } animate ease-in-out duration-700`}
             >
               <h1 className="warning_mssg_title ">Warning!</h1>
