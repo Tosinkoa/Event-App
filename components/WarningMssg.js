@@ -24,7 +24,7 @@ const WarrningMssg = ({ id }) => {
             <div
               className={`warning_mssg_background  ${
                 showWarningMssg ? "translate-y-2" : "-translate-y-96"
-              } animate ease-in-out duration-700  `}
+              } animate ease-in-out duration-700`}
             >
               <h1 className="warning_mssg_title ">Warning!</h1>
               <p className="warning_mssg_text">Are you sure you want to delete event</p>

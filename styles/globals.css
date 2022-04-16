@@ -60,7 +60,7 @@
 /*-----------------WarningMssg-------------------*/
 
 .warning_mssg_background {
-  @apply bg-gray-50  p-10 sm:w-4/5 md:w-2/4 lg:left-1/4 lg:right-1/4 md:left-1/4 sm:left-10 border fixed bottom-2/4 z-10 rounded-md flex flex-col;
+  @apply bg-gray-50  p-10 sm:w-4/5 md:w-2/4 lg:left-1/4 lg:right-1/4 md:left-1/4 sm:left-10 border fixed  z-10 rounded-md flex flex-col;
 }
 
 .warning_mssg_title {
